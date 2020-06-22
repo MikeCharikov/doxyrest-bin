@@ -102,25 +102,11 @@ if #g_exampleArray > 0 then
 	:hidden:
 
 %{
-	table.sort(g_exampleArray, cmpNames)
-	local exampleList = ""
-
-	for i = 1, #g_exampleArray do
-		local example = g_exampleArray[i]
-		local targetFileName = getItemFileName(example)
-		local docName = string.gsub(targetFileName, "%.rst$", "")
-
-		generateFile(targetFileName, "example.rst.in", example)
-		exampleList = exampleList .. "|\t:doc:`" .. docName .."`\n"
-}
-	$(targetFileName)
-%{
-	end -- for
+	
+	generateFile("examples.rst", "examples.rst.in", g_exampleArray)
 }
 
-.. rubric:: Examples:
-
-$exampleList
+	examples.rst
 
 %{
 end -- if
