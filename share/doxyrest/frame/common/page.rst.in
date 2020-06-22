@@ -31,9 +31,9 @@ if #page.subPageArray > 0 then
 }
 .. toctree::
 	:hidden:
-
+	
 %{
-	table.sort(page.subPageArray, cmpTitles)
+	--table.sort(page.subPageArray, cmpTitles)
 	local pageTree = ""
 
 	for i = 1, #page.subPageArray do
