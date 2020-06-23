@@ -13,8 +13,10 @@
 local argArray = table.pack(...)
 local exampleArray = argArray[1]
 }
-
 .. index:: pair: examples; examples
+
+Examples
+========
 
 .. toctree::
 	:hidden:

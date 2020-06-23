@@ -16,6 +16,7 @@ local example = argArray[1]
 if FORCE_INCLUDE_FILE then
 }
 .. include:: $FORCE_INCLUDE_FILE
+
 %{
 end -- if
 }
